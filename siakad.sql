@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2020 at 06:13 AM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.0.31
+-- Generation Time: Oct 06, 2020 at 04:07 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,50 @@ SET time_zone = "+00:00";
 --
 -- Database: `siakad`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_dosen`
+--
+
+CREATE TABLE `tbl_dosen` (
+  `id_dosen` int(11) NOT NULL,
+  `nidn_dosen` varchar(15) NOT NULL,
+  `nm_dosen` varchar(50) NOT NULL,
+  `alamat` text NOT NULL,
+  `gender` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_dosen`
+--
+
+INSERT INTO `tbl_dosen` (`id_dosen`, `nidn_dosen`, `nm_dosen`, `alamat`, `gender`) VALUES
+(1, '0408059501', 'CHAIRUN NAS', 'Cirebon', 'Laki-laki'),
+(2, '0420058301', 'LINDA NORHAN', 'Cirebon', 'Perempuan'),
+(3, '0409079501', 'NURSAKA PUTRA', 'Kuningan', 'Laki-laki');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_mahasiswa`
+--
+
+CREATE TABLE `tbl_mahasiswa` (
+  `id_mahasiswa` int(11) NOT NULL,
+  `nim_mahasiswa` varchar(15) NOT NULL,
+  `nm_mahasiswa` int(50) NOT NULL,
+  `alamat` text NOT NULL,
+  `gender` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_mahasiswa`
+--
+
+INSERT INTO `tbl_mahasiswa` (`id_mahasiswa`, `nim_mahasiswa`, `nm_mahasiswa`, `alamat`, `gender`) VALUES
+(1, 'APRIANSYAH RIZQ', 2019111013, 'Cirebon', 'Laki-laki');
 
 -- --------------------------------------------------------
 
@@ -48,6 +91,18 @@ INSERT INTO `tbl_user` (`id_user`, `username`, `password`, `nm_user`, `status`) 
 --
 
 --
+-- Indexes for table `tbl_dosen`
+--
+ALTER TABLE `tbl_dosen`
+  ADD PRIMARY KEY (`id_dosen`);
+
+--
+-- Indexes for table `tbl_mahasiswa`
+--
+ALTER TABLE `tbl_mahasiswa`
+  ADD PRIMARY KEY (`id_mahasiswa`);
+
+--
 -- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -56,6 +111,18 @@ ALTER TABLE `tbl_user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `tbl_dosen`
+--
+ALTER TABLE `tbl_dosen`
+  MODIFY `id_dosen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_mahasiswa`
+--
+ALTER TABLE `tbl_mahasiswa`
+  MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`

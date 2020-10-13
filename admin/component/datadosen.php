@@ -7,7 +7,8 @@
                 </div>
                 <div class="card-body">
 
-
+                    <a href="index.php?page=form_datadosen" class="btn btn-primary">Tambah</a>
+                    <p></p>
 
                     <div class="table-responsive">
                         <table id="zero_config" class="table table-striped table-bordered no-wrap">

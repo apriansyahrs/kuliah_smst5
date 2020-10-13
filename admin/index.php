@@ -275,6 +275,14 @@ $ra = mysqli_fetch_array($sqla);
                             include 'component/datamahasiswa.php';
                             break;
 
+                        case 'form_datadosen';
+                            include 'component/form_datadosen.php';
+                            break;
+
+                        case 'form_datamahasiswa';
+                            include 'component/form_datamahasiswa.php';
+                            break;
+
                         default:
                             echo "<script>alert('Halaman Not Found 404')</script>";
                     }
