@@ -227,6 +227,9 @@ $ra = mysqli_fetch_array($sqla);
                                 <li class="sidebar-item"><a href="index.php?page=datamahasiswa" class="sidebar-link"><span class="hide-menu"> Data Mahasiswa
                                         </span></a>
                                 </li>
+                                <li class="sidebar-item"><a href="index.php?page=datamatkul" class="sidebar-link"><span class="hide-menu"> Data Mata Kuliah
+                                        </span></a>
+                                </li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-graduation-cap"></i><span class="hide-menu">Kualifikasi </span></a>
@@ -271,17 +274,51 @@ $ra = mysqli_fetch_array($sqla);
                             include 'component/datadosen.php';
                             break;
 
-                        case 'datamahasiswa';
-                            include 'component/datamahasiswa.php';
-                            break;
-
                         case 'form_datadosen';
                             include 'component/form_datadosen.php';
+                            break;
+
+                        case 'form_datadosen_edit';
+                            include 'component/form_datadosen_edit.php';
+                            break;
+
+                        case 'hapus_datadosen';
+                            include 'component/hapus_datadosen.php';
+                            break;
+
+                        case 'datamahasiswa';
+                            include 'component/datamahasiswa.php';
                             break;
 
                         case 'form_datamahasiswa';
                             include 'component/form_datamahasiswa.php';
                             break;
+
+                        case 'form_datamahasiswa_edit';
+                            include 'component/form_datamahasiswa_edit.php';
+                            break;
+
+                        case 'hapus_datamahasiswa';
+                            include 'component/hapus_datamahasiswa.php';
+                            break;
+
+                        case 'datamatkul';
+                            include 'component/datamatkul.php';
+                            break;
+
+                        case 'form_datamatkul';
+                            include 'component/form_datamatkul.php';
+                            break;
+
+                        case 'form_datamatkul_edit';
+                            include 'component/form_datamatkul_edit.php';
+                            break;
+
+                        case 'hapus_datamatkul';
+                            include 'component/hapus_datamatkul.php';
+                            break;
+
+
 
                         default:
                             echo "<script>alert('Halaman Not Found 404')</script>";

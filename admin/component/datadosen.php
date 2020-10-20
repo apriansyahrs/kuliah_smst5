@@ -35,7 +35,10 @@
                                         <td><?= "$rd[nm_dosen]"; ?></td>
                                         <td><?= "$rd[alamat]"; ?></td>
                                         <td><?= "$rd[gender]"; ?></td>
-                                        <td>Detail</td>
+                                        <td>
+                                            <a href="index.php?page=form_datadosen_edit&id=<?= $rd['id_dosen']; ?>" class="btn btn-warning">Edit</a>
+                                            <a href="index.php?page=hapus_datadosen&id=<?= $rd['id_dosen']; ?>" class="btn btn-danger">Hapus</a>
+                                        </td>
                                     </tr>
                                 <?php
                                     $i++;
