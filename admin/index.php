@@ -28,6 +28,7 @@ $ra = mysqli_fetch_array($sqla);
     <link href="../assets/assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <link href="../assets/assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../assets/assets/libs/swal/sweetalert2.min.css"> -->
     <!-- Custom CSS -->
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/assets/extra-libs/prism/prism.css">
@@ -286,6 +287,10 @@ $ra = mysqli_fetch_array($sqla);
                             include 'component/hapus_datadosen.php';
                             break;
 
+                        case 'data_dosen_multidelete';
+                            include 'component/data_dosen_multidelete.php';
+                            break;
+
                         case 'datamahasiswa';
                             include 'component/datamahasiswa.php';
                             break;
@@ -302,6 +307,10 @@ $ra = mysqli_fetch_array($sqla);
                             include 'component/hapus_datamahasiswa.php';
                             break;
 
+                        case 'data_mahasiswa_multidelete';
+                            include 'component/data_mahasiswa_multidelete.php';
+                            break;
+
                         case 'datamatkul';
                             include 'component/datamatkul.php';
                             break;
@@ -316,6 +325,10 @@ $ra = mysqli_fetch_array($sqla);
 
                         case 'hapus_datamatkul';
                             include 'component/hapus_datamatkul.php';
+                            break;
+
+                        case 'data_matkul_multidelete';
+                            include 'component/data_matkul_multidelete.php';
                             break;
 
 
@@ -350,6 +363,7 @@ $ra = mysqli_fetch_array($sqla);
         <script src="../assets/assets/libs/popper.js/dist/umd/popper.min.js"></script>
         <script src="../assets/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- apps -->
+        <!-- <script src="../assets/assets/libs/swal/sweetalert2.all.min.js"></script> -->
         <!-- apps -->
         <script src="../assets/dist/js/app.min.js "></script>
         <script src="../assets/dist/js/app.init-menusidebar.js"></script>
